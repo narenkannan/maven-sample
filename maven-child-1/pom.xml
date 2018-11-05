@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>nila.rana.maven</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>${version}</version>
+	</parent>
+	<artifactId>maven-child-1</artifactId>
+	<name>Maven Child 1</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>nila.rana.maven</groupId>
+				<artifactId>sample-maven-plugin</artifactId>
+
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>nila.rana.maven</groupId>
+					<artifactId>sample-maven-plugin</artifactId>
+					<version>${version}</version>
+					<executions>
+						<execution>
+							<id>compile</id>
+							<goals>
+								<goal>compile</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+</project>
